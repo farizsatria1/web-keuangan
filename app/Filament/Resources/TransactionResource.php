@@ -38,9 +38,6 @@ class TransactionResource extends Resource
                 Forms\Components\TextInput::make('note')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->required(),
             ]);
     }
 

@@ -20,9 +20,9 @@ class Dashboard extends BaseDashboard
                 Section::make()
                     ->schema([
                         DatePicker::make('startDate')
-                            ->maxDate(fn (Get $get) => $get('endDate') ?: now()),
+                            ->maxDate(fn (Get $get) => $get('endDate') ?: now()->startOfMonth()),
                         DatePicker::make('endDate')
-                            ->minDate(fn (Get $get) => $get('startDate') ?: now())
+                            ->minDate(fn (Get $get) => $get('startDate') ?: now()->endOfMonth())
                             ->maxDate(now()),
                     ])
                     ->columns(2),

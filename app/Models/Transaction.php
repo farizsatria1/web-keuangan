@@ -15,7 +15,6 @@ class Transaction extends Model
         'date_transaction',
         'amount',
         'note',
-        'image',
     ];
 
     public function category(): BelongsTo
